@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Lora:wght@400;500&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --gold: #ffcc00;
+  --back-green: #009b4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--back-green);
+}
+
+#root {
+  background: var(--back-green);
+}
+
+body {
+  color: var(--gold);
+}
+
+.input {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+input {
+  width: 15vw;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid var(--gold) !important;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 1.8rem;
+}
+
+.grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--gold);
+}
+
+.title {
+  color: var(--gold);
+  text-decoration: none !important;
+  font-size: 2rem;
+  transition: all 0.5s linear;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-own {
+  width: 25rem;
+  max-width: 30rem;
+  min-height: 30rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img-poster {
+  min-width: 10rem;
+  max-height: 30rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  transition: all 0.3s linear;
+}
+
+.card-own {
+  border: 1px solid var(--gold);
+}
+
+.card-own:hover img {
+  transform: scale(1.05);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100vh;
+  color: var(--gold);
+}
+
+.movie {
+  height: 100vh;
+  background-color: var(--back-green);
+}
+
+.card {
+  border: none !important;
+}
+
+.card-right {
+  background-color: #34e18b;
+}
+
+.card-img-cont {
+  background-color: var(--back-green) !important;
+  background-size: cover;
+}
+
+.card-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1.5rem;
+}
+
+.card-text span {
+  font-weight: 600;
+}
+
+.btn {
+  font-size: 1.5rem !important;
+  color: white !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.movies-loading {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--gold);
+}
