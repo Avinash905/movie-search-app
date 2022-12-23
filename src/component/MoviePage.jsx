@@ -10,7 +10,7 @@ export default function MoviePage() {
 
   const movieData = async (url) => {
     try {
-      const singledata = await fetch(url);
+      const singledata = await fetch(url, { referrerPolicy: "unsafe_url" });
       const singlejsonData = await singledata.json();
       if (singlejsonData.Response === "True") {
         setIsLoading(false);
