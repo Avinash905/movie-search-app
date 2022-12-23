@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
 
   const apiData = async (url) => {
     try {
-      const data = await fetch(url, { referrerPolicy: "unsafe_url" });
+      const data = await fetch(url);
       const jsonData = await data.json();
       if (jsonData.Response === "True") {
         setIsLoading(false);

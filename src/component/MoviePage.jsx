@@ -6,11 +6,9 @@ export default function MoviePage() {
   const [movie, setMovie] = useState("");
   const movieId = useParams();
 
-  const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${movieId.id}`;
-
   const movieData = async (url) => {
     try {
-      const singledata = await fetch(url, { referrerPolicy: "unsafe_url" });
+      const singledata = await fetch(url);
       const singlejsonData = await singledata.json();
       if (singlejsonData.Response === "True") {
         setIsLoading(false);
@@ -24,6 +22,7 @@ export default function MoviePage() {
   };
 
   useEffect(() => {
+    const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${movieId.id}`;
     const timer = setTimeout(() => {
       movieData(API);
     }, 500);
@@ -72,7 +71,7 @@ export default function MoviePage() {
                 <span>Summary:</span> {movie.Plot}
               </p>
               <div className="button text-center">
-                <NavLink className="btn btn-success " to="/">
+                <NavLink className="btn btn-success " to="/movie-search-app">
                   Go Back
                 </NavLink>
               </div>
