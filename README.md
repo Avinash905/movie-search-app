@@ -1,4 +1,4 @@
-# 🎥TextUtils
+# 🎥Movie-search-app
 
 <h3>Description :</h3> 
 This is a website that displays all the movies based on your search query. It also displays information about a particular movie when clicked.
